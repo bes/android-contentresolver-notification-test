@@ -1,4 +1,3 @@
-# android-contentresolver-notification-test
 A test for android contentresolver notifications
 ================================================
 
@@ -10,38 +9,28 @@ http://developer.android.com/reference/android/content/ContentResolver.html#regi
 Here is the output of some test code I wrote for testing what different types of notifications actually do, in combination with notifyForDescendents
 
 
-First test
-
-Notifying on content://base.uri
-
+    First test
+    Notifying on content://base.uri
     content://base.uri onChange, notifyForDescendents=false
     content://base.uri onChange, notifyForDescendents=true
     content://base.uri/a/sub/uri onChange, notifyForDescendents=false
     content://base.uri/a/sub/uri onChange, notifyForDescendents=true
     content://base.uri/a/sub/uri/sub/uri onChange, notifyForDescendents=false
     content://base.uri/a/sub/uri/sub/uri onChange, notifyForDescendents=true
-
-Second test
-
-Notifying on content://base.uri/a/sub/uri
-
+    Second test
+    Notifying on content://base.uri/a/sub/uri
     content://base.uri onChange, notifyForDescendents=true
     content://base.uri/a/sub/uri onChange, notifyForDescendents=false
     content://base.uri/a/sub/uri onChange, notifyForDescendents=true
     content://base.uri/a/sub/uri/sub/uri onChange, notifyForDescendents=false
     content://base.uri/a/sub/uri/sub/uri onChange, notifyForDescendents=true
-
-Third test
-
-Notifying on content://base.uri/a/sub/uri/sub/uri
-
+    Third test
+    Notifying on content://base.uri/a/sub/uri/sub/uri
     content://base.uri onChange, notifyForDescendents=true
     content://base.uri/a/sub/uri onChange, notifyForDescendents=true
     content://base.uri/a/sub/uri/sub/uri onChange, notifyForDescendents=false
     content://base.uri/a/sub/uri/sub/uri onChange, notifyForDescendents=true
-
-End test
-
+    End test
 
 The conclusions we can draw are:
 
